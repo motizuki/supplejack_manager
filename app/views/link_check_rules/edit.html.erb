@@ -10,7 +10,7 @@ http://digitalnz.org/supplejack
 
 <div class="row">
   <div class="eight columns centered">
-    <h2 id="link-check-rule-title" class="left"><%= @link_check_rule.source.name %></h2>
+    <h2 id="link-check-rule-title" class="left"><%= @link_check_rule.source.try(:name) %></h2>
     <%= render 'form', url: environment_link_check_rule_path(id: @link_check_rule.id, environment: params[:environment]) %>
   </div>
 </div>
